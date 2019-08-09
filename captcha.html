@@ -23,11 +23,23 @@
         width: 100px;
         font-size: 16px;
       }
+	  p,button{
+		display: none;
+	  }
+	  button{
+		width: 100px;
+		height: 26px;
+		border-radius: 5px;
+		background-color: #3f7d7d;
+		color: #fff;
+		border: 1px;
+		cursor: pointer;
+	  }
     </style>
 </head>
 <body>
-    <div class="code">
-		<!--
+    <div align="center">
+		<!-- class="code"
         <input type="text" value="" placeholder="请输入验证码（不区分大小写）" class="input-val">
         <canvas id="canvas" width="60" height="25"></canvas>
         <button class="btn">提交</button>
@@ -35,8 +47,69 @@
 		
 		<p>宝谕是大笨蛋</p>
 		<p>大笨蛋是宝谕</p>
+		<button>点这里</button>
+		
+		<p>肚子好点没有</p>
+		<button>点这里</button>
+		
+		<p>今天吃了什么</p>
+		<button>点这里</button>
+		
+		<p>记得等我下班</p>
+		<button>点这里</button>
+		
+		<p>今晚想吃什么</p>
+		<button>点这里</button>
+		
+		<p>你吃粑粑好了</p>
+		<button>点这里</button>
+		
+		<p>回我微信！</p>
     </div>
 <script src="https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/js/lib/jquery-1.10.2_1c4228b8.js"></script>
+<script>
+	$(function(){
+		$("p:eq(0)").show();
+		$("p:eq(1)").show();
+		$("button:eq(0)").show();
+		
+		$("button:eq(0)").click(function(){
+			$("button:eq(0)").hide(1000);
+			$("p:eq(2)").show(1000);
+			$("button:eq(1)").show(1000);
+		});
+		
+		$("button:eq(1)").click(function(){
+			$("button:eq(1)").hide(1000);
+			$("p:eq(3)").show(1000);
+			$("button:eq(2)").show(1000);
+		});
+		
+		$("button:eq(2)").click(function(){
+			$("button:eq(2)").hide(1000);
+			$("p:eq(4)").show(1000);
+			$("button:eq(3)").show(1000);
+		});
+		
+		$("button:eq(3)").click(function(){
+			$("button:eq(3)").hide(1000);
+			$("p:eq(5)").show(1000);
+			$("button:eq(4)").show(1000);
+		});
+		
+		$("button:eq(4)").click(function(){
+			$("button:eq(4)").hide(5000);
+			$("p:eq(6)").show(5000);
+			$("button:eq(5)").show(5000);
+		});
+		
+		$("button:eq(5)").click(function(){
+			$("button:eq(5)").hide(1000);
+			$("p:eq(7)").show(1000);
+			$("button:eq(6)").show(1000);
+		});
+	});
+</script>
 <script>
     $(function(){
         var show_num = [];
