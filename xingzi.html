@@ -34,6 +34,7 @@
 		color: #fff;
 		border: 1px;
 		cursor: pointer;
+		display: inline-block;
 	  }
     </style>
 </head>
@@ -46,69 +47,80 @@
 		-->
 		
 		<p>臭宝是大笨蛋</p>
-		<p>大笨蛋是臭宝</p>
+		<button>不是</button>
+	    <button>是的</button>
+		
+		<p>我说是就是，臭宝大笨蛋</p>
+		<p>就知道你会选这个，大笨蛋臭宝</p>
+		<p>今天是臭宝的六一哟</p>
+		<p>虽然法律规定14岁以下才是小朋友</p>
+		<p>但谁要你是臭宝呢</p>
+		<p>旺仔牛奶喝完了吧</p>
 		<button>点这里</button>
 		
-		<p>肚子好点没有</p>
+		<p>是不是很好喝</p>
+		<button>不是</button>
+		<button>是的</button>
+		
+		<p>不好喝你去举报商家吧</p>
+		<p>好喝下次给你买</p>
 		<button>点这里</button>
 		
-		<p>今天吃了什么</p>
-		<button>点这里</button>
-		
-		<p>记得等我下班</p>
-		<button>点这里</button>
-		
-		<p>今晚想吃什么</p>
-		<button>点这里</button>
-		
-		<p>你吃粑粑好了</p>
-		<button>点这里</button>
-		
-		<p>回我微信！</p>
-		<p>爱你哟</p>
+		<p>祝臭宝六一快乐</p>
+		<p>臭宝的臭宝</p>
     </div>
 <script src="https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/js/lib/jquery-1.10.2_1c4228b8.js"></script>
 <script>
 	$(function(){
 		$("p:eq(0)").show();
-		$("p:eq(1)").show();
+		$("button").hide();
 		$("button:eq(0)").show();
+		$("button:eq(1)").show();
 		
 		$("button:eq(0)").click(function(){
 			$("button:eq(0)").hide(1000);
-			$("p:eq(2)").show(1000);
-			$("button:eq(1)").show(1000);
+			$("button:eq(1)").hide(1000);
+			$("button:eq(2)").show(1000);
+			$("p:eq(1)").show(1000);
 		});
 		
 		$("button:eq(1)").click(function(){
+			$("button:eq(0)").hide(1000);
 			$("button:eq(1)").hide(1000);
-			$("p:eq(3)").show(1000);
 			$("button:eq(2)").show(1000);
+			$("p:eq(2)").show(1000);
 		});
 		
+		var i = 2;
 		$("button:eq(2)").click(function(){
-			$("button:eq(2)").hide(1000);
-			$("p:eq(4)").show(1000);
-			$("button:eq(3)").show(1000);
+			$("p:eq(" + (i + 1) + ")").show(1000);
+			i++;
+			if(i == 7){
+				$("p:eq(7)").show(1000);
+				$("button:eq(2)").hide(1000);
+				$("button:eq(3)").show(1000);
+				$("button:eq(4)").show(1000);
+			}
 		});
 		
 		$("button:eq(3)").click(function(){
+			$("p:eq(8)").show(1000);
 			$("button:eq(3)").hide(1000);
-			$("p:eq(5)").show(1000);
-			$("button:eq(4)").show(1000);
+			$("button:eq(4)").hide(1000);
+			$("button:eq(5)").show(1000);
 		});
 		
 		$("button:eq(4)").click(function(){
-			$("button:eq(4)").hide(5000);
-			$("p:eq(6)").show(5000);
-			$("button:eq(5)").show(5000);
+			$("p:eq(9)").show(1000);
+			$("button:eq(3)").hide(1000);
+			$("button:eq(4)").hide(1000);
+			$("button:eq(5)").show(1000);
 		});
 		
 		$("button:eq(5)").click(function(){
 			$("button:eq(5)").hide(1000);
-			$("p:eq(7)").show(1000);
-			$("p:eq(8)").show(6000);
-			$("button:eq(6)").show(1000);
+			$("p:eq(10)").show(6000);
+			$("p:eq(11)").show(12000);
 		});
 	});
 </script>
